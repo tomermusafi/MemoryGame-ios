@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC21B995266B6A4A0012E9CC /* TopTenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21B994266B6A4A0012E9CC /* TopTenViewController.swift */; };
+		BC21B998266B766A0012E9CC /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21B997266B766A0012E9CC /* GameOverViewController.swift */; };
 		BC42225E2635C2CD00DE2B87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC42225D2635C2CD00DE2B87 /* AppDelegate.swift */; };
 		BC4222602635C2CD00DE2B87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC42225F2635C2CD00DE2B87 /* SceneDelegate.swift */; };
 		BC4222622635C2CD00DE2B87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4222612635C2CD00DE2B87 /* ViewController.swift */; };
@@ -15,9 +17,14 @@
 		BC42226A2635C2CE00DE2B87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC4222682635C2CE00DE2B87 /* LaunchScreen.storyboard */; };
 		BC627A4C265BD66F00A3B714 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC627A4B265BD66F00A3B714 /* Card.swift */; };
 		BC627A4F265BE20000A3B714 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC627A4E265BE20000A3B714 /* Game.swift */; };
+		BCAF39D7266A6BAE00230CC7 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAF39D6266A6BAE00230CC7 /* Record.swift */; };
+		BCD238F6266C1BA800F0A0F7 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD238F5266C1BA800F0A0F7 /* MyTableViewCell.swift */; };
+		BCEFF46A26629A5A00763558 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEFF46926629A5A00763558 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC21B994266B6A4A0012E9CC /* TopTenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTenViewController.swift; sourceTree = "<group>"; };
+		BC21B997266B766A0012E9CC /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		BC42225A2635C2CD00DE2B87 /* demo3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC42225D2635C2CD00DE2B87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC42225F2635C2CD00DE2B87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +35,9 @@
 		BC42226B2635C2CE00DE2B87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC627A4B265BD66F00A3B714 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		BC627A4E265BE20000A3B714 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		BCAF39D6266A6BAE00230CC7 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		BCD238F5266C1BA800F0A0F7 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		BCEFF46926629A5A00763558 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +79,11 @@
 				BC42226B2635C2CE00DE2B87 /* Info.plist */,
 				BC627A4B265BD66F00A3B714 /* Card.swift */,
 				BC627A4E265BE20000A3B714 /* Game.swift */,
+				BCEFF46926629A5A00763558 /* HomeViewController.swift */,
+				BCAF39D6266A6BAE00230CC7 /* Record.swift */,
+				BC21B994266B6A4A0012E9CC /* TopTenViewController.swift */,
+				BC21B997266B766A0012E9CC /* GameOverViewController.swift */,
+				BCD238F5266C1BA800F0A0F7 /* MyTableViewCell.swift */,
 			);
 			path = demo3;
 			sourceTree = "<group>";
@@ -146,8 +161,13 @@
 				BC4222622635C2CD00DE2B87 /* ViewController.swift in Sources */,
 				BC627A4F265BE20000A3B714 /* Game.swift in Sources */,
 				BC42225E2635C2CD00DE2B87 /* AppDelegate.swift in Sources */,
+				BCD238F6266C1BA800F0A0F7 /* MyTableViewCell.swift in Sources */,
 				BC4222602635C2CD00DE2B87 /* SceneDelegate.swift in Sources */,
+				BCAF39D7266A6BAE00230CC7 /* Record.swift in Sources */,
 				BC627A4C265BD66F00A3B714 /* Card.swift in Sources */,
+				BC21B995266B6A4A0012E9CC /* TopTenViewController.swift in Sources */,
+				BCEFF46A26629A5A00763558 /* HomeViewController.swift in Sources */,
+				BC21B998266B766A0012E9CC /* GameOverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

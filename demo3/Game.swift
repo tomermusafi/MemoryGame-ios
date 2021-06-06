@@ -8,6 +8,11 @@
 import Foundation
 import UIKit
 
+protocol GameCallBack {
+    func gameStarted()
+    func gameEnded()
+}
+
 public class Game{
     
     private var first: Card!
@@ -23,10 +28,12 @@ public class Game{
     private var view: UIView!
     private var moves_counter: Int!
     private var my_view:UIView!
+    private var call_back: GameCallBack!
     init(){
         
     }
-    init(view: UIView, numberOfCards:[Int], images:[UIImage], moves: UILabel){
+    init(call_back: GameCallBack,view: UIView, numberOfCards:[Int], images:[UIImage], moves: UILabel){
+        self.call_back = call_back
         self.view = view
         moves_counter = 0
         self.points = 0
@@ -37,6 +44,9 @@ public class Game{
         self.level = 0
         self.cards = creatCards();
         createBoard();
+    }
+    public func getMoves() -> Int{
+        return self.moves_counter
     }
     
     func creatCards() -> [Card]{
@@ -102,8 +112,11 @@ public class Game{
         print(self.clickCounter < 2)
         print("zzz")
         if(card.isEnable() && !card.isDiscovered() && self.clickCounter < 2){
-            self.moves_counter = self.moves_counter + 1
-            self.moves.text = "\(moves_counter ?? 0)"
+            if(moves_counter == 0){
+                call_back.gameStarted()
+            }
+            
+            
             sender.setImage(self.cards[btn_index].getImage(), for: .normal)
             card.setEnable(enable: false);
             self.clickCounter = self.clickCounter + 1
@@ -133,6 +146,7 @@ public class Game{
             }
         }
         if(clickCounter >= 2){
+            
             disableCards()
         }
         checkIfFoundAll()
@@ -146,6 +160,8 @@ public class Game{
             second = card
         }
         if(second != nil){
+            self.moves_counter = self.moves_counter + 1
+            self.moves.text = "\(moves_counter ?? 0)"
             if(first.getImage() == second.getImage()){
                 cards[first.getId()].setDiscovered(discavered: true)
                 cards[second.getId()].setDiscovered(discavered: true)
@@ -172,15 +188,16 @@ public class Game{
     
     func checkIfFoundAll(){
         if(points == numberOfCards[level]){
-            self.moves_counter = 0
+            self.call_back.gameEnded()
+            //self.moves_counter = 0
             for v in self.my_view.subviews{
                 v.removeFromSuperview()
             }
-            self.moves.text = "\(moves_counter!)"
-            self.points = 0
-            self.clickCounter = 0
-            self.cards = creatCards()
-            createBoard()
+//            self.moves.text = "\(moves_counter!)"
+//            self.points = 0
+//            self.clickCounter = 0
+//            self.cards = creatCards()
+//            createBoard()
         }
     }
     
